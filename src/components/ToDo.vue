@@ -13,7 +13,7 @@
         v-bind:key="index"
         :class="{ completed: todo.done }"                                                                                                           
         @click="todo.done = !todo.done"
-      >{{ todo.content }}<button style="padding: 2px 5px;" v-on:click="deleteTask(index)">Delete</button></li>
+      >{{ todo.content }}<button style="padding: 1px 5px;" v-on:click="deleteTask(index)">Delete</button></li>
     </ol>
   </div>
 </template>
@@ -32,7 +32,8 @@ export default {
         { content: "HTML", done: true },
         { content: "CSS", done: true },
         { content: "JavaScript", done: true },
-        { content: "Vue JS", done: false }
+        { content: "Vue JS", done: false },
+        { content: "Angular JS", done: false }
       ],
       inputText: ""
     };
@@ -124,13 +125,12 @@ div input {
   height: 7px;
   padding: 11px 0;
 
-  border-radius: 5px;
-  border: solid black 2px;
+  border-radius: 4px;
+  border: solid black 1px;
   text-align: left;
   font-size: 16px;
   font-family: inherit;
   color: grey;
-  font-weight: bold;
   outline: none;
   text-indent: 10px;
 }

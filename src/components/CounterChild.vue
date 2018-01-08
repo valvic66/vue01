@@ -2,7 +2,7 @@
   <div class="counter-item">
     <div class="counter-item-text" v-on:click="incrementCounterList">{{ todoItem }}</div>
     <div class="counter-item-button">
-      <button v-on:click="incrementCounterButton">{{ counterButton }} times button clicked, {{ counterList }} times list clicked</button>
+      <button v-on:click="incrementCounterButton">{{ counterButton }} btn click, {{ counterList }} list item click</button>
     </div>
   </div>
 </template>
@@ -49,16 +49,19 @@ export default {
     cursor: pointer;
     background-color: lightcoral;
 
-    width: 100%;
+    max-width: 100%;
     padding: 5px 0;
+    margin: 0 15px;
 
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
   }
   .counter-item-text {
     /* background-color: lightblue; */
     color: white;
+    font-size: .9em;
 
     padding: 0 10px;
     flex: 1;
@@ -71,12 +74,12 @@ export default {
   }
   .counter-item-button {
     /* background-color: lightpink; */
-    flex: 3;
+    flex: 2;
     text-align: right;
     margin-right: 1em;
   }
   .counter-item-button button {
-    padding: 2px 20px;
+    padding: 2px 5px;
   }
 
 </style>

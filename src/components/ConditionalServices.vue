@@ -86,7 +86,6 @@ export default {
         background-color: #61a1bc;
 
         width: 80%;
-        height: 220px;  
         margin: 20px auto;
         padding: 20px 0;
 
@@ -135,7 +134,7 @@ export default {
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
     }
     div ul li {
         background-color: #8ec16d;
@@ -145,9 +144,9 @@ export default {
         padding: 2px 10px;
         width: 90%;
 
-        /* display: flex;
+        display: flex;
         flex-direction: column;
-        align-items: center; */
+        align-items: center;
     }
     div ul li.active{
         background-color: lightcoral;
@@ -161,9 +160,6 @@ export default {
     }
     @media screen and (min-width: 576px) {
         .conditional { max-width: 80%; }
-    }
-     @media screen and (min-width: 645px) {
-        .conditional-services { height: 150px; }
     }
     @media screen and (min-width: 768px) {
         .conditional { max-width: 70%; }

@@ -1,6 +1,5 @@
 <template>
   <div class="break">
-    - Break between examples -
   </div>
 </template>
 
@@ -21,13 +20,11 @@ export default {
 <style scoped>
   .break {
     color:white;
-    background-color: lightseagreen;
+    background-color: white;
     font-weight: bold;
 
     max-width: 100%;
-    margin: 2em 0;
-    height: 1em;
-    padding: 5px 0;
+    margin: 1em 0;
 
     display: flex;
     flex-direction: row;

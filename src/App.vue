@@ -1,11 +1,17 @@
 <template>
   <div id="app">
+    <p>by Micu Valentin</p>
+    <break></break>
     <instant-search></instant-search>
+    <break></break>
     <to-do title="Todo tasks"></to-do>
+    <break></break>
     <conditional-services></conditional-services>
+    <break></break>
     <counter-parent></counter-parent>
     <break></break>
     <navigation-menu></navigation-menu>
+    <break></break>
   </div>
 </template>
 
@@ -40,7 +46,7 @@ export default {
   color: #2c3e50;
 }
 body {
-  background-color: lightgray;
+  background-color: transparent;
 }
 </style>
 
