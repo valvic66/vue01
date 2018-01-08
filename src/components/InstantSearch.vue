@@ -1,6 +1,6 @@
 <template>
-    <form class="instant-search" v-cloak>
-        <h1>Instant Search</h1>
+    <form class="instant-search effect" v-cloak>
+        <h2 style="padding-top: 20px;">Instant Search</h2>
         <div class="search-bar">
             <input type="text" v-model="searchString" placeholder="Enter Apple product search">
         </div>
@@ -11,9 +11,9 @@
                 v-bind:key="key"
             >
                 <a v-bind:href="article.url"><img v-bind:src="article.image" /></a>
-                <p>{{ article.title }}</p>
+                <p>{{ article.title | capitalize }}</p>
             </li>
-        </ul> 
+        </ul>
     </form>
 </template>
 
@@ -25,7 +25,7 @@ export default {
             searchString: "",
             articles: [
                 {
-                    "title": "Apple iPhone 6",
+                    "title": "apple iPhone 6",
                     "url": "https://www.emag.ro/search/iphone",
                     "image": "https://s4emagst.akamaized.net/products/5617/5616445/images/res_ab736a4f78e2a562ad01325752875057_200x200_c0e1.jpg"
                 },
@@ -66,6 +66,13 @@ export default {
 
             return articles_array
         }
+    },
+    filters: {
+        capitalize: function (value) {
+            if (!value) return ''
+            value = value.toString()
+            return value.charAt(0).toUpperCase() + value.slice(1)
+        }
     }
 }
 </script>
@@ -80,8 +87,41 @@ export default {
         padding: 0;
     }
     .instant-search {
-   
+        max-width: 90%;
+        min-width: 390px;
+        background:#FFF;
+        margin: 5px auto;
     }
+   .effect {
+        position:relative;
+        -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+    .effect:before, .effect:after {
+            content:"";
+            position:absolute;
+            z-index:-1;
+            -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+            -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+            box-shadow:0 0 20px rgba(0,0,0,0.8);
+            top:10px;
+            bottom:10px;
+            left:0;
+            right:0;
+            -moz-border-radius:100px / 10px;
+            border-radius:100px / 10px;
+        }
+    .effect:after {
+            right:10px;
+            left:auto;
+            -webkit-transform:skew(8deg) rotate(3deg);
+            -moz-transform:skew(8deg) rotate(3deg);
+            -ms-transform:skew(8deg) rotate(3deg);
+            -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+        }
+
     .search-bar {
         background-color:#5c9bb7;
         background-image:-webkit-linear-gradient(top, #5c9bb7, #5392ad);
@@ -90,7 +130,7 @@ export default {
 
         box-shadow: 0 1px 1px #ccc;
         border-radius: 2px;
-        max-width: 400px;
+        max-width: 90%;
         padding: 4px;
         margin: 20px auto 20px;
         position:relative;
@@ -114,7 +154,7 @@ export default {
     }
     ul {
         list-style: none;
-        width: 428px;
+        width: 80%;
         margin: 0 auto;
         text-align: left;
     }
@@ -130,9 +170,22 @@ export default {
         float: left;
     }
     ul li p {
-        margin-left: 90px;
+        margin-left: 80px;
+        font-size: .9em;
         font-weight: bold;
         padding-top: 18px;
         color:#6e7a7f; 
+    }
+    @media screen and (min-width: 576px) {
+        .instant-search { max-width: 80%; }
+    }
+    @media screen and (min-width: 768px) {
+        .instant-search { max-width: 70%; }
+    }
+    @media screen and (min-width: 992px) {
+        .instant-search { max-width: 60%; }
+    }
+    @media screen and (min-width: 1024px) {
+        .instant-search { max-width: 50%; }
     }
 </style>
