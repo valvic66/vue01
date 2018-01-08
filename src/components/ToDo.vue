@@ -121,7 +121,6 @@ export default {
 }
 div input {
   border: none;
-  width: 300px;
   height: 7px;
   padding: 11px 0;
 
