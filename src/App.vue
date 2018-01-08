@@ -1,12 +1,9 @@
 <template>
   <div id="app">
     <instant-search></instant-search>
-    <break></break>
-    <to-do title="Todo tasks (Pls cross out if task completed)"></to-do>
-    <break></break>
-    <counter-parent></counter-parent>
-    <break></break>
+    <to-do title="Todo tasks"></to-do>
     <conditional-services></conditional-services>
+    <counter-parent></counter-parent>
     <break></break>
     <navigation-menu></navigation-menu>
   </div>
@@ -16,9 +13,9 @@
 import Break from './components/Break'
 import InstantSearch from './components/InstantSearch'
 import ToDo from './components/ToDo'
+import ConditionalServices from './components/ConditionalServices'
 import NavigationMenu from './components/NavigationMenu'
 import CounterParent from './components/CounterParent'
-import ConditionalServices from './components/ConditionalServices'
 
 
 export default {
@@ -39,7 +36,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
 }
 body {

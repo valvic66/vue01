@@ -1,6 +1,6 @@
 <template>
-    <form class="instant-search effect" v-cloak>
-        <h2 style="padding-top: 20px;">Instant Search</h2>
+    <div class="instant-search effect" v-cloak>
+        <h2 style="padding-top: 20px; text-align: center;">Instant Search</h2>
         <div class="search-bar">
             <input type="text" v-model="searchString" placeholder="Enter Apple product search">
         </div>
@@ -14,7 +14,7 @@
                 <p>{{ article.title | capitalize }}</p>
             </li>
         </ul>
-    </form>
+    </div>
 </template>
 
 <script>
@@ -88,39 +88,40 @@ export default {
     }
     .instant-search {
         max-width: 90%;
-        min-width: 390px;
+        min-width: 360px;
+        height: 480px;
         background:#FFF;
         margin: 5px auto;
     }
-   .effect {
+    .effect {
         position:relative;
         -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
         -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
         box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     }
     .effect:before, .effect:after {
-            content:"";
-            position:absolute;
-            z-index:-1;
-            -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-            -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-            box-shadow:0 0 20px rgba(0,0,0,0.8);
-            top:10px;
-            bottom:10px;
-            left:0;
-            right:0;
-            -moz-border-radius:100px / 10px;
-            border-radius:100px / 10px;
+        content:"";
+        position:absolute;
+        z-index:-1;
+        -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        top:10px;
+        bottom:10px;
+        left:0;
+        right:0;
+        -moz-border-radius:100px / 10px;
+        border-radius:100px / 10px;
         }
     .effect:after {
-            right:10px;
-            left:auto;
-            -webkit-transform:skew(8deg) rotate(3deg);
-            -moz-transform:skew(8deg) rotate(3deg);
-            -ms-transform:skew(8deg) rotate(3deg);
-            -o-transform:skew(8deg) rotate(3deg);
-            transform:skew(8deg) rotate(3deg);
-        }
+        right:10px;
+        left:auto;
+        -webkit-transform:skew(8deg) rotate(3deg);
+        -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+        -o-transform:skew(8deg) rotate(3deg);
+        transform:skew(8deg) rotate(3deg);
+    }
 
     .search-bar {
         background-color:#5c9bb7;
