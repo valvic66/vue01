@@ -1,6 +1,6 @@
 <template>
   <div class="product">
-    <img :src="'/images/' + product.image" class="product-image">
+    <img :src="product.image" class="product-image">
     <div class="product-title">{{ product.title }}</div>
     <div class="product-price">
       <div class="product-price-amount">$ {{ product.price }}</div>

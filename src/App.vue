@@ -47,21 +47,21 @@ export default {
           id: 1,
           title: "Product no. 1",
           price: 300,
-          image: "apple_1.jpg",
+          image: "https://s5emagst.akamaized.net/products/3445/3444889/images/res_49e87252f4e6ede1b47eadc2aee9010b_200x200_oq2q.jpg",
           qty: 1
         },
         {
           id: 2,
           title: "Product no. 2",
           price: 500,
-          image: "apple_2.jpg",
+          image: "https://s4emagst.akamaized.net/products/2043/2042057/images/res_be272f187a7cab3b5931d2aed37e4a90_200x200_6087.jpg",
           qty: 1
         },
         {
           id: 3,
           title: "Product no. 3",
           price: 100,
-          image: "apple_3.jpg",
+          image: "https://s4emagst.akamaized.net/products/8894/8893687/images/res_59f34fedbd988eb8b14665569a3af0a7_200x200_vq3.jpg",
           qty: 1
         }
       ]

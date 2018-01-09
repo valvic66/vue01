@@ -2,7 +2,7 @@
   <div class="cart">
     <h3 class="cart-title">SHOPPING CART</h3>
     <div class="cart-item" v-for="(item, index) in items" v-bind:key="index">
-      <img :src="'/images/' + item.image" class="cart-item-img">
+      <img :src="item.image" class="cart-item-img">
       <div class="info-wrapper">
         <div class="cart-item-title">{{ item.title }}</div>
         <div class="price-q-wrapper">
